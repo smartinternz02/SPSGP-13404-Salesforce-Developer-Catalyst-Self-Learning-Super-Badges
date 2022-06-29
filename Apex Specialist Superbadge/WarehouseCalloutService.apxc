@@ -1,5 +1,8 @@
 public with sharing class WarehouseCalloutService implements Queueable {
-    private static final String WAREHOUSE_URL = 'https://th-superbadge-apex.herokuapp.com/equipment'; 
+    private static final String WAREHOUSE_URL = 'https://th-superbadge-apex.herokuapp.com/equipment';
+    
+    //Write a class that makes a REST callout to an external warehouse system to get a list of equipment that needs to be updated.
+    //The callout’s JSON response returns the equipment records that you upsert in Salesforce. 
     
     @future(callout=true)
     public static void runWarehouseEquipmentSync(){
